@@ -1,5 +1,6 @@
 package com.webapp;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -10,18 +11,20 @@ import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class Response extends HttpServlet {
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+public class LoginServlet extends HttpServlet {
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String username=request.getParameter("username"); // uSERNAME from the login form
+
+        String username=request.getParameter("username"); // USERNAME from the login form
         String password=request.getParameter("password"); // password from login form
 
         // Connect to mysql and verify username password
 
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName(Constants.DB_Class);
             Connection conn = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/programmersapp", "root", "");
+                    Constants.DB_URL, Constants.DB_User, Constants.DB_Pass);
 
             PreparedStatement ps = conn.prepareStatement(
                     "select username,password from users where username=? and password=?"); // user_name
@@ -34,16 +37,14 @@ public class Response extends HttpServlet {
                 response.sendRedirect("profile.jsp");
                 return;
             }
-            response.sendRedirect("error.html");
+//            response.sendRedirect("error.html");
+            String ErrMssg = "Incorrect Username/Password";
+            RequestDispatcher rd = request.getRequestDispatcher("profile.jsp");
+            rd.forward(request, response);
             return;
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
-    }
-
-
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
         // processRequest(request, response);
         PrintWriter out = response.getWriter();
         out.print("username" + request.getParameter("username"));

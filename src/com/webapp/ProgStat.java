@@ -12,13 +12,10 @@ public class ProgStat {
     public Connection getConn(){
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/ProgrammersStatistics","root", "");
-        } catch (SQLException ex) {
-            Logger.getLogger(ProgStat.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(ProgStat.class.getName()).log(Level.SEVERE, null, ex);
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/programmersapp","root", "");
+        } catch (SQLException | ClassNotFoundException ex) {
+            ex.printStackTrace();
         }
-
         return conn;
 
     }

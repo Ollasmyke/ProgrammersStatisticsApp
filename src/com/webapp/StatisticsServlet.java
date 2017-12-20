@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.*;
 
-@WebServlet(name = "ProfileServlet")
+@WebServlet(name = "StatisticsServlet")
 public class StatisticsServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -33,7 +33,7 @@ public class StatisticsServlet extends HttpServlet {
 //            out.println(ps);
             rs.next();
              int i = rs.getInt(1);
-            out.println("Count = "+ i);
+            out.println("Number of Programmers that prefer " + Language + " is " + i);
 
 
         } catch (Exception e2) {

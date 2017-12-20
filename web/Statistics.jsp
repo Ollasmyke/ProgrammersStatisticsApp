@@ -28,37 +28,61 @@
     <!-- Navigation -->
 <nav class="navbar navbar-light bg-light static-top">
     <div class="container">
-        <a class="navbar-brand" href="index.html">Programmers' Statistics!</a>
-        <a class="btn btn-primary" href="login1.jsp">Sign Up</a>
-        <a class="btn btn-primary" href="login1.jsp">Sign In</a>
+        <a class="navbar-brand" href="index.jsp">Programmers' Statistics!</a>
+        <%--<a class="btn btn-primary" href="register.jsp">Sign Up</a>--%>
+        <a class="btn btn-primary" href="login.jsp">Sign In</a>
 
     </div>
     </nav>
 
 <body>
-<div>
-<form action="statistics" method="post">
-    <%--<input type="hidden" value="<%=request.getAttribute("language")%>" name="language">--%>
+<%--<div>--%>
+<%--<form action="statistics" method="post">--%>
+    <%--&lt;%&ndash;<input type="hidden" value="<%=request.getAttribute("language")%>" name="language">&ndash;%&gt;--%>
 
-        Check Language Statistics:
-        <select name="language">
-            <option>Java</option>
-            <option>Fortran</option>
-            <option>Python</option>
-            <option>C</option>
-            <option>C++</option>
-            <option>C#</option>
-            <option>PHP</option>
-            <option>JavaScript</option>
-            <option>Swift</option>
-            <option>Ruby</option>
-            <option>Pascal</option>
-            <option>MATLAB</option>
-            <option>Perl</option>
-        </select>
+        <%--Check Language Statistics:--%>
+        <%--<select name="language" >--%>
+            <%--<option>Java</option>--%>
+            <%--<option>Fortran</option>--%>
+            <%--<option>Python</option>--%>
+            <%--<option>C</option>--%>
+            <%--<option>C++</option>--%>
+            <%--<option>C#</option>--%>
+            <%--<option>PHP</option>--%>
+            <%--<option>JavaScript</option>--%>
+            <%--<option>Swift</option>--%>
+            <%--<option>Ruby</option>--%>
+            <%--<option>Pascal</option>--%>
+            <%--<option>MATLAB</option>--%>
+            <%--<option>Perl</option>--%>
+        <%--</select>--%>
 
-    <input type="submit" value="Submit">
-</form>
+<li> Perl <input type="text" name=""> </li>
+<li> JS <input type="text" name=""> </li>
+
+
+
+    <%--<input type="submit" value="Submit">--%>
+<%--</form>--%>
+<%--</div>--%>
+<div class="row">
+<div class="col-4 col-centered">
+    <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center">Java <span class="badge badge-primary badge-pill">14</span></li>
+        <li class="list-group-item d-flex justify-content-between align-items-center"> Fortran </li>
+        <li class="list-group-item">Python</li>
+        <li class="list-group-item">C</li>
+        <li class="list-group-item">C++</li>
+        <li class="list-group-item">C#</li>
+        <li class="list-group-item">PHP</li>
+        <li class="list-group-item">JavaScript</li>
+        <li class="list-group-item">Swift</li>
+        <li class="list-group-item">Ruby</li>
+        <li class="list-group-item">Pascal</li>
+        <li class="list-group-item">MATLAB</li>
+        <li class="list-group-item">Perl</li>
+    </ul>
+</div>
 </div>
 </body>
 

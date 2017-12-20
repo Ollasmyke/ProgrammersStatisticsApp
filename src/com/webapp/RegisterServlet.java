@@ -30,9 +30,9 @@ public class RegisterServlet extends HttpServlet {
 //            request.setAttribute("username", request.getParameter("username"));
 
             try {
-                Class.forName("com.mysql.jdbc.Driver");
+                Class.forName(Constants.DB_Class);
                 Connection conn = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:3306/programmersapp", "root", "");
+                        Constants.DB_URL, Constants.DB_User, Constants.DB_Pass);
 
                 PreparedStatement ps = conn.prepareStatement("insert into users values(?,?,?,?,?,?)");
 

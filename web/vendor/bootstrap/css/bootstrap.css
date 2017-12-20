@@ -4991,13 +4991,13 @@ button.list-group-item-dark.active {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1;
-  color: #000;
+  color: white;
   text-shadow: 0 1px 0 #fff;
   opacity: .5;
 }
 
 .close:focus, .close:hover {
-  color: #000;
+  color: white;
   text-decoration: none;
   opacity: .75;
 }
@@ -5098,11 +5098,13 @@ button.close {
 .modal-header .close {
   padding: 15px;
   margin: -15px -15px -15px auto;
+    color: white;
 }
 
 .modal-title {
   margin-bottom: 0;
   line-height: 1.5;
+    color: white;
 }
 
 .modal-body {
