@@ -26,45 +26,45 @@
       </ul>
       <!--<div class="tab-content">-->
         <div id="signup">
-          <h1>Sign Up for Free</h1>
+      <h1>Sign Up for Free</h1>
 
-          <form action="register" method="post">
-          
+      <form action="register" method="post">
+
           <div class="top-row">
-            <div class="field-wrap">
-              <label>
-                First Name<span class="req">*</span>
-              </label>
-              <input type="text" name="first_name" required autocomplete="off" />
-            </div>
+              <div class="field-wrap">
+                  <label>
+                      First Name<span class="req">*</span>
+                  </label>
+                  <input type="text" name="first_name" required autocomplete="off" />
+              </div>
 
-            <div class="field-wrap">
-              <label>
-                Last Name<span class="req">*</span>
-              </label>
-              <input type="text" name="last_name" required autocomplete="off"/>
-            </div>
+              <div class="field-wrap">
+                  <label>
+                      Last Name<span class="req">*</span>
+                  </label>
+                  <input type="text" name="last_name" required autocomplete="off"/>
+              </div>
           </div>
 
           <div class="field-wrap">
-            <label>
-              Username <span class="req">*</span>
-            </label>
-            <input type="text" name="username" required autocomplete="off"/>
+              <label>
+                  Username <span class="req">*</span>
+              </label>
+              <input type="text" name="username" required autocomplete="off"/>
           </div>
 
           <div class="field-wrap">
-            <label>
-              Password<span class="req">*</span>
-            </label>
-            <input type="password" name="password" required autocomplete="off"/>
+              <label>
+                  Password<span class="req">*</span>
+              </label>
+              <input type="password" name="password" required autocomplete="off"/>
           </div>
 
           <button type="submit" class="button button-block"/>Get Started</button>
 
-          </form>
+      </form>
 
-        </div>
+  </div>
         
       <!--</div>&lt;!&ndash; tab-content &ndash;&gt;-->
       
